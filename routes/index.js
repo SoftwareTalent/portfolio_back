@@ -5,6 +5,11 @@ const sgMail = require('@sendgrid/mail');
 
 /* GET home page. */
 
+router.get('/', function(req, res, next) {
+  
+    res.status(200).send("This is portfolio backend");
+});
+
 router.get('/customers', function(req, res, next) {
   Customer.find({}, function(err, customers) {
     if (err)
